@@ -1,0 +1,116 @@
+$border: 1px solid rgb(187, 5, 5);
+$padding: 10px;
+$label-font-size: 13px;
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+// Demo styles
+form {
+  
+  legend {
+    font-size: 2em;
+    margin-bottom: 1em;
+    width: 100%;
+    border-bottom: $border;
+  }
+}
+
+
+// float label
+.float-label {
+  .control {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    border-bottom: $border !important;
+    padding-top: $padding + $label-font-size;
+    padding-bottom: $padding;
+    &.border-gray{
+        border-bottom: 1px solid #ccc !important;
+        padding-top: $padding + $label-font-size;
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+    &.no-border{
+        border-bottom: none !important;
+        padding-top: $padding + $label-font-size;
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        
+        
+    }
+    &.no-border.no-height {
+        height: 0px;
+        padding: 0;
+    }
+       
+    &.small {
+      width: 56%;
+      margin: 0 auto;
+      display: inline-block;
+      position: relative;
+      
+    }
+    &.very-small {
+        width: 20%;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        
+      }
+    
+    &.medium {
+      width: 70%;
+      padding-left: $padding;
+    }
+    
+    &:last-child {
+     border: 0;
+    }
+  }
+  
+  input, textarea,select,option {
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    resize: none;
+    font-size: 14px;
+    background-color: transparent;
+    
+    & + label {
+      position: absolute;
+      top: 10px;
+      transition: top 0.7s ease, opacity 0.7s ease;
+      opacity: 0;
+      
+      // Some nice styling
+      font-size: 11px;
+      color: #8d8d8d;
+    
+    }
+    & + label.readonly {
+        opacity:1 !important;
+    }
+    
+    &:valid + label {
+      opacity: 1;
+      top: 3px;
+    }
+    
+    &:focus + label {
+      color: #8d8d8d;
+      font-size: 11px;
+      
+    }
+  }
+}

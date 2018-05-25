@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { PagePlanos } from '../pages/planos';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PagePlanos
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

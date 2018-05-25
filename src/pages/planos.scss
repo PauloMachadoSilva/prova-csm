@@ -1,0 +1,366 @@
+//Importando scss globais
+@import '../sass/_variables';
+@import '../sass/_mixins';
+@import '../sass/_styles';
+@import '../sass/_input';
+
+:host{
+    .planos {
+        min-height: 300px;
+        border: 1px solid rgb(0, 68, 255);
+        background-color: $color-cards;
+        margin: 0 auto;
+        padding: 20px;
+        .title {
+            display: inline-block;
+            margin: 20px 20px 0px 20px;
+            font-size: 20px;
+        }
+        .secao {
+            margin: 20px 10px 20px 20px;                                        
+            display: inline-block;
+            position: absolute;
+            right:15px;
+            font-size: 22px;
+            font-weight: 900;
+        }
+        .escolha {
+            height: 200px;
+            position: relative;
+            .quantidade {
+                width: 30%;
+                position: relative;
+                margin: 0 auto;
+                display: inline-block;
+            }  
+            .cartao {
+                width: 68%;
+                position: relative;
+                margin: 0 auto;
+                display: inline-block;
+               
+            } 
+            .cartao-max {
+                width: 48%;
+                position: relative;
+                margin: 0 auto;
+                display: none;
+                .detalhe-cartao {
+                    width: 90%;
+                    p {
+                        display: none;
+                    }
+                }
+               
+            } 
+            .detalhe-cartao {
+                width: 12.5%;
+                position: relative;
+                top: 25px;
+                display:inline-block;
+                padding: 0 5px 0 0;
+                p {
+                    text-align: center;
+                    border-bottom: 1px solid $color;
+                    font-size: 12px;
+                    margin: 0 auto;
+                    &.none {
+                        border-bottom: none !important;
+                        font-weight: 900;
+                    }
+                }
+               
+                .img-cartoes {
+                    width: 100%;
+                }   
+            } 
+           
+        }  
+          
+    }
+    .beneficios {
+        background-color: $color-cards;
+        margin: 0 auto; 
+        position: relative;
+        .title {
+            display: inline-block;
+            margin: 20px 20px 20px 20px;
+            font-size: 20px;
+        }
+        .secao {
+            margin: 20px 10px 20px 20px;                                        
+            display: inline-block;
+            position: absolute;
+            right:15px;
+            font-size: 22px;
+            font-weight: 900;
+        }
+        .principais {
+            width: 38%;
+            position: relative;
+            margin: 0 auto;
+            display: inline-table;
+            .principais-detalhes {
+                width: 32%;
+                padding: 10px;
+                position: relative;
+                margin: 0 auto;
+                display: inline-table;
+                font-size: 12px;
+                text-align: center;
+                img {
+                    width: 30px;
+                }
+            }
+        }
+        .detalhes {
+            width: 61%;
+            position: relative;
+            margin: 0 auto;
+            display: inline-table;
+            p {
+                font-size:12px;
+                text-align: justify;
+            }
+           
+        }
+        .botao-mobile button {
+            display: none;
+            border-color: $color;
+            color: $color;
+            width: 50%;
+            right: 0;
+            position: absolute;
+            font-size: 10px;
+            text-align: left;
+            height: 25px;
+        }
+    }
+   
+    .dados {
+        height: 440px;        
+        margin: 10px auto;
+        position: relative;
+        
+        .pessoais {
+            //TODO : @Mixin
+            width: $size-cards-dados;
+            display: inline-table;
+            padding: 0px 10px 0px 0px;
+            
+            
+            .content {
+                position: relative;
+                background-color: $color-cards;
+                // height: 475px;
+                width: 100%;
+                p {
+                    font-size: 12px;
+                    color: #8d8d8d;
+                    width: 85%;
+                    text-align:justify;
+                    position: relative;
+                    margin: 12px auto;
+                    span {
+                        color: red;
+                        font-weight: 900;
+                    }
+                    button {
+                        @include botoes();                   
+                    }
+                }
+                
+                .title {
+                    @include title();
+                }
+                .secao {
+                    margin: 20px 10px 20px 20px;                                        
+                    display: inline-block;
+                    position: absolute;
+                    right:15px;
+                    font-size: 22px;
+                    font-weight: 900;
+                }
+            }
+           
+        }
+        .pagamento {
+            width: $size-cards-dados;
+            display: inline-table;
+            padding: 0px 10px 0px 0px;
+            height: 440px;
+            .content {
+                position: relative;
+                background-color: $color-cards;
+                // height: 475px;
+                width: 100%;
+                img {
+                    right: 0;
+                    width: 50px;
+                    position: absolute;
+                    margin: 0 auto;
+                    /* display: inline-block; */
+                    top: 8px;
+                
+                }
+                .litle {
+                    width: 25px;
+                    position: absolute;
+                    margin: 0 auto;
+                    right:00px;
+                    top: 20px;
+                
+                }
+                
+                .dados-cartao {
+                    width: 85%;
+                    margin: 0 auto;
+                }
+                p {
+                    font-size: 12px;
+                    color: #8d8d8d;
+                    width: 85%;
+                    text-align:justify;
+                    position: relative;
+                    margin: 0px auto;
+                    span {
+                        color: red;
+                        font-weight: 900;
+                    }
+                    button {
+                        border-color: rgb(187, 5, 5);;
+                        color: rgb(187, 5, 5);
+                        width: 49%;
+                        margin: 30px auto;
+                        position: relative;
+                        font-size: 10px;
+                        text-align: center;
+                        height: 25px;
+                        
+                        
+                    }
+                }
+                
+                .title {
+                    @include title();
+                }
+                .secao {
+                    margin: 20px 10px 20px 20px;                                        
+                    display: inline-block;
+                    position: absolute;
+                    right:15px;
+                    font-size: 22px;
+                    font-weight: 900;
+                }
+            }
+            
+        }
+        .pedido {
+            width: $size-cards-dados;
+            display: inline-table;
+            
+            height: 440px;
+            .content {
+                position: relative;
+                background-color: $color-cards;
+                // height: 475px;
+                width: 100%;
+                .desconto {
+                    border: 1px solid $color;
+                    display: inline-block;
+                    position: absolute;
+                    width: 70%;
+                    right: 0;
+                    top: 20px;
+                    
+                }
+                img {
+                    width: 20px;
+                    position: absolute;
+                    margin: 0 auto;
+                    left:100px;
+                    top: 20px;
+                
+                }
+                .litle {
+                    width: 20px;
+                    position: absolute;
+                    margin: 0 auto;
+                    left:20px;
+                    top: 20px;
+                
+                }
+                .dados-produto {
+                    width: 85%;
+                    margin: 0 auto;
+                }
+                .total {
+                   
+                    display: inline-block;
+                    position: absolute;
+                    width: 70%;
+                    right: 0;
+                    top: 20px;
+                    text-align: right;
+                    
+                }
+                .checkbox {
+                    display: inline-block;
+                    width: 10%;
+                    color: #8d8d8d;
+                }
+                span {
+                    color: #8d8d8d;
+                    font-size: 12px;
+                }
+                a {
+                    color: #8d8d8d;
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 12px;
+                    color: #8d8d8d;
+                    width: 85%;
+                    text-align:justify;
+                    position: relative;
+                    margin: 0 auto;
+                    span {
+                        color: red;
+                        font-weight: 900;
+                    }
+                    button {
+                        border-color: rgb(187, 5, 5);
+                        color: rgb(187, 5, 5);
+                        width: 49%;
+                        margin: 30px auto;
+                        position: relative;
+                        font-size: 10px;
+                        text-align: center;
+                        height: 25px;
+                        
+                        
+                    }
+                    .red {
+                        background-color: rgb(187, 5, 5);
+                        color: #fff;
+                    }
+                }
+                
+                .title {
+                    @include title();
+                }
+                .secao {
+                    margin: 20px 10px 20px 20px;                                        
+                    display: inline-block;
+                    position: absolute;
+                    right:15px;
+                    font-size: 22px;
+                    font-weight: 900;
+                }
+            }
+            
+        }
+    }
+   
+
+}

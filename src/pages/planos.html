@@ -1,0 +1,237 @@
+<!-- Div content Principal -->
+<div class="content">
+    
+    <div class="planos">
+        <div class="escolha">
+            <div class="quantidade">
+                <label class="title">ESCOLHA SEU PLANO</label>
+                <form class="float-label" spellcheck="false">
+                    <div class="control">
+                        <select>
+                        <option  *ngFor="let plano of planos" [value]="plano.valor">{{ plano.text }}  R$  {{ plano.valor }}</option>
+                        </select>
+                    </div>
+                    <div class="control">
+                            <input type="text" placeholder="Convidados" value="3" required />
+                            <label for="title">Convidados</label>
+                          </div>
+                </form>
+            </div>
+            <div class="cartao">
+                    <div *ngFor="let plano of planos" class="detalhe-cartao">
+                            <p>{{plano.text}}</p>
+                            <img [src]="plano.url"  class="img-cartoes">
+                            <p class="none">R$ {{plano.valor}}</p>       
+                    </div>
+                    
+            </div>
+            <div class="cartao-max">
+                    <div *ngFor="let plano of planosMax" class="detalhe-cartao">
+                            <p>{{plano.text}}</p>
+                            <img [src]="plano.url"  class="img-cartoes">
+                            <p class="none">R$ {{plano.valor}}</p>       
+                    </div>
+                    
+            </div>
+        </div>    
+        <div class="beneficios">
+            <div class="principais">
+                <div>
+                    <label class="title">PRINCIPAIS BENEFICIOS:</label>
+                </div>
+                <div class="principais-detalhes">
+                    <img src="../assets/imgs/estrela@2x.jpg"> 
+                    <p>Prioridade 1 na compra de ingresso</p>                       
+                </div>
+                <div class="principais-detalhes">
+                    <img src="../assets/imgs/cartao@2x.jpg"> 
+                    <p>Prioridade 1 na compra de ingresso
+                       para até 3 convidados</p>    
+                </div>
+                <div class="principais-detalhes"> 
+                    <img src="../assets/imgs/crf-icone@2x.jpg"> 
+                    <p>Acumule muitos pontos e troque
+                        por experiências
+                    </p>    
+                </div>                
+             </div>
+            <div class="detalhes">
+                <p>
+                    Cartão ingresso personalizado prioridade 1 na compra
+                    de 1 ingresso desconto em ingressos compra online, com ingresso
+                    carregando no cartão-ingresso, até 3 convidados para compra de 
+                    ingressos**, cartão com fun'ão de débito pré-pago Visa*, acumule
+                    pontos no Programa de Fidelidade. 3 vezes a sua mensalidade em pontos
+                    de adesão, experiências incriveís, desconto em lojas oficias, rede de 
+                    desconto, desconto na mensalidade do Nação JR para o seu filho.
+                    <br><br>
+                    *Opcional sem taxa de emissao de cartão
+                    <br><br>
+                    ** Opcional. A compra de ingressos para convidado possuem as mesmas vantagens
+                    de sócio-torcedor. Sera acrescentado o valor de R$ 30 à sua mensalidade por mês
+                    
+                </p>
+               
+            </div>
+            <p class="botao-mobile">
+                    <button>Saiba todos os beneficios</button>    
+            </p>
+        </div>        
+        
+
+    </div>
+    
+    <div class="dados">
+        <div class="pessoais">
+            <div class="content">
+                    <label class="title">MEUS DADOS</label>
+                    <label class="secao">1</label>
+                    <form class="float-label" spellcheck="false">
+                            <div class="control">
+                              <input type="text" placeholder="Nome" required />
+                              <label for="title">Nome</label>
+                            </div>
+                            <div class="control">
+                                <input type="tel" placeholder="CPF" required />
+                                <label for="title">CPF</label>
+                            </div>
+                            <div class="control">
+                                <input type="text" placeholder="E-mail" required />
+                                <label for="title">E-mail</label>
+                            </div>
+                            <div class="control">
+                                <input type="password" placeholder="Senha" required />
+                                <label for="title">Senha</label>
+                            </div>
+                    </form>
+            
+                    <p>
+                        <span>Atenção:</span> O CPF não poderá ser alterado posteriormente, 
+                        atenção aos dados, eles são muito importantes para indentificação e 
+                        validação da sua assinatura.
+                        <button>
+                                Cadastre aqui o seu endereço para receber seu cartão-ingresso
+                            </button>
+                    </p>
+                    
+
+            </div>
+           
+        </div>
+        <div class="pagamento">
+            <div class="content">
+                <label class="title">PAGAMENTO</label>
+                <label class="secao">2</label>
+                <form class="float-label" spellcheck="false">
+                        <div class="control">
+                                <select>
+                                  <option value="">Selecione</option>
+                                  <option value="0">Cartão de Crédio</option>
+                                  <option value="1">Cartão de Débito</option>
+                                </select>
+                          <label for="title">Forma de Pagamento</label>
+                        </div>
+                        <div class="control">
+                            <input type="tel" placeholder="Nome do Portador (Impresso no cartão)" value="Carlos Eduardo P CARVALHO" required />
+                            <label for="title">Nome do Portador (Impresso no cartão)</label>
+                            <img class="litle" src="../assets/imgs/check2.png">
+                            
+                        </div>
+                        <div class="control">
+                                <input type="tel" placeholder="CPF" required />
+                                <label for="title">CPF</label>
+                        </div>
+                        <div class="control">
+                            <input type="tel" placeholder="Número do cartão" required maxlength="16" />
+                            <label for="title">Número do Cartão</label>
+                            <img src="../assets/imgs/logos/logo-visa.png">
+                            
+                        </div>
+                        <div class="dados-cartao">
+                            <div class="control very-small">
+                                <input type="tel" placeholder="Mês" required maxlength="2" />
+                                <label for="title">Mês</label>
+                            </div>
+                            <div class="control very-small">
+                                <input type="tel" placeholder="Ano" required maxlength="4" />
+                                <label for="title">Ano</label>
+                            </div>
+                            <div class="control small">
+                                <input type="tel" placeholder="Código de Segurança" value="112" required maxlength="4" />
+                                <label for="title">Código de Segurança</label>
+                                <img class="litle" src="../assets/imgs/check2.png">
+                            </div>
+                        </div>
+                </form>
+        
+                <p>
+                    <button>Pagar com cartão Multiplo</button>
+                    <button>Pagar com cartão Peela</button>
+                </p>
+            </div>
+        </div>
+        <div class="pedido">
+            <div class="content">
+                <label class="title">PEDIDO</label>
+                <label class="secao">3</label>
+                <form class="float-label" spellcheck="false">
+                        <div class="control">
+                          <input readonly type="text" placeholder="Plano" required value="+ Paixão" />
+                          <label class="readonly" for="title">Plano</label>
+                          <img src="../assets/imgs/edit.png">     
+                          <input class="total" type="text" placeholder="" value="R$ 199,90" required /> 
+                                               
+                          
+                        </div>
+                        <div class="control">
+                            <input readonly type="tel" placeholder="Periodicidade" value="Anual" required />
+                            <label class="readonly" for="title">Periodicidade</label>
+                            <img src="../assets/imgs/edit.png">     
+                            
+                            <input class="total" type="text" placeholder="" value="12 x R$ 199,90" required />                            
+                            
+                        </div>
+                        <div class="dados-produto">
+                            <div class="control small">
+                                <input type="tel" placeholder="Produto" value="Convidados"required maxlength="2" />
+                                <label class="readonly"  for="title">Produto</label>
+                                <img src="../assets/imgs/edit.png">                                     
+                                
+                            </div>
+                            <div class="control very-small">
+                                <input readonly type="tel" placeholder="Ano" value="3" required maxlength="4" />
+                                <label for="title">Ano</label>
+                                <img class="litle" src="../assets/imgs/edit.png">                                     
+                                
+                            </div>
+                            <div class="control very-small">
+                                <input readonly type="tel" placeholder="" value="R$ 90,00" required maxlength="4" />
+                                <label for="title">Código de Segurança</label>
+                            </div>
+                        </div>
+                        <div class="control border-gray">
+                            <input readonly type="text" placeholder="Cupon" value="Desconto" required />
+                            <label class="readonly" for="title">Cupon</label>
+                            <input class="desconto" type="text" placeholder="" value="" required />                            
+                        </div>
+                        <div class="control no-border">
+                            <input readonly type="text" placeholder="Cupon" value="Total" required />
+                            <input class="total" type="text" placeholder="" value="R$ 289,90" required />                            
+                        </div>
+                        <div class="control no-border no-height">
+                            <input class="checkbox" type="checkbox" value=""/><span>Eu li e concordo com os </span><a href="#"> termos de uso</a>
+                        </div>
+                            
+                </form>
+        
+                <p>
+                    <button>VOLTAR</button>
+                    <button class="red">FINALIZAR PEDIDO</button>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    
+
+</div>
